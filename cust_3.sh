@@ -5,7 +5,7 @@ cp ports.conf /etc/apache2; cp 000-default.conf /etc/apache2/sites-enabled;
 \cp jvm.options /etc/elasticsearch/jvm.options.d; cp elasticsearch.yml /etc/elasticsearch; 
 \systemctl daemon-reload; systemctl enable --now elasticsearch.service; 
 \cp kibana.yml /etc/kibana; systemctl daemon-reload; systemctl enable --now kibana.service; 
-\cp logstash.yml etc/logstash; systemctl enable --now logstash.service; 
+\cp logstash.yml /etc/logstash; systemctl enable --now logstash.service; 
 \cp filebeat.yml /etc/filebeat; systemctl restart filebeat; 
 \cp mysqld.cnf /etc/mysql/mysql.conf.d; service mysql restart; 
 \cp mysqldamp.sh /usr/local/bin
